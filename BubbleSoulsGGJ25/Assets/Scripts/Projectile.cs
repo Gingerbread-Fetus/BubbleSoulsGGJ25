@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,13 +11,12 @@ public class Projectile : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        rb.velocity = Vector2.left;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        print(rb.velocity);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -24,6 +24,17 @@ public class Projectile : MonoBehaviour
         if (collision.gameObject.tag.Equals("Player"))
         {
             collision.gameObject.GetComponent<Player>().TakeDamage();
+            Destroy(gameObject);
+        }
+    }
+
+    public void SetVelocity(Vector3 newVelocity)
+    {
+        rb = GetComponent<Rigidbody2D>();
+        if (rb != null)
+        {
+            rb.velocity = newVelocity * speed;
+            print(rb.velocity);
         }
     }
 }

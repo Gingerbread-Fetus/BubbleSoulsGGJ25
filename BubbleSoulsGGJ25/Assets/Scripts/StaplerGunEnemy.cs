@@ -65,8 +65,12 @@ public class StaplerGunEnemy : Enemy
     {
         if (playerTarget)
         {
-            var newProjectile = Instantiate(projectilePrefab, gameObject.transform.position, new Quaternion());
+            GameObject newProjectile = Instantiate(projectilePrefab, gameObject.transform.position, new Quaternion());
+            Projectile prj = newProjectile.GetComponent<Projectile>();
+
+            prj.SetVelocity(transform.right);
             //newProjectile.transform.parent = transform; 
+            
         }
     }
 }
