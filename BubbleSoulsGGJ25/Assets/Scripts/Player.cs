@@ -42,15 +42,6 @@ public class Player : MonoBehaviour
         rb.velocity = new Vector2(horizontalInput * speed, rb.velocity.y);
     }
 
-    public void OnJump(InputAction.CallbackContext context)
-    {
-        if (context.ReadValueAsButton() && Grounded())
-        {
-            rb.velocity = new Vector2(rb.velocity.x, jumpForce);
-            _grounded = false;
-            StartCoroutine(JumpFrameSkipRoutine());
-        }
-    }
 
     private IEnumerator JumpFrameSkipRoutine()
     {
@@ -73,4 +64,20 @@ public class Player : MonoBehaviour
             return false;
         }
     }
+    public void OnJump(InputAction.CallbackContext context)
+    {
+        if (context.ReadValueAsButton() && Grounded())
+        {
+            rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+            _grounded = false;
+            StartCoroutine(JumpFrameSkipRoutine());
+        }
+    }
+
+    public void TakeDamage()
+    {
+        Destroy(gameObject, .2f);
+        FindObjectOfType<SceneDirector>().Reload();
+    }
+
 }
