@@ -16,7 +16,6 @@ public class Projectile : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        print(rb.velocity);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
