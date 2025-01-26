@@ -77,7 +77,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1255974006, guid: 11c06a981322d74479cad11a3bc0c03d, type: 3}
+  m_Sprite: {fileID: -1539509624, guid: 573a8d8cd6b7dac409fa185ab8ec8f1c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -274,3 +274,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 10
   jumpForce: 10
+  playerKillDepth: -20
