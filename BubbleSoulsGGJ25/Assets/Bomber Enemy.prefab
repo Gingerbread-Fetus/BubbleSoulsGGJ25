@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 739597097664569125}
   - component: {fileID: 6246477456218569101}
   - component: {fileID: 2678730243552640129}
-  - component: {fileID: 7033243164511398923}
+  - component: {fileID: 1050489596700597806}
   m_Layer: 7
   m_Name: Bomber Enemy
   m_TagString: Untagged
@@ -47,6 +47,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f02bc0fe4a8bbe94c9af79e0e21b171c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Forceable: 0
   dropActivationDistance: 22
   moveSpeed: 0.8
   startPoint: {fileID: 0}
@@ -93,7 +94,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 404d5ce4bcb42ef498e5962879ce44c4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -126,13 +127,13 @@ Rigidbody2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!58 &7033243164511398923
-CircleCollider2D:
+--- !u!70 &1050489596700597806
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -146,7 +147,7 @@ CircleCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 192
+    m_Bits: 0
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -164,5 +165,5 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.5
+  m_Size: {x: 2.56, y: 1.03}
+  m_Direction: 1
