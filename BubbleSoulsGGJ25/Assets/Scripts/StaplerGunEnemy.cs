@@ -70,7 +70,6 @@ public class StaplerGunEnemy : Enemy
 
             prj.SetVelocity(transform.right);
             //newProjectile.transform.parent = transform; 
-            
         }
     }
 }

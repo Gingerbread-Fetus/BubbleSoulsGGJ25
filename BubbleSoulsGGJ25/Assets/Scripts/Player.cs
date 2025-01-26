@@ -11,6 +11,8 @@ public class Player : MonoBehaviour
     private float movementY;
     private bool _grounded;
     private bool _jumpWait;
+    private PlayerInput _playerInput;
+    private Vector2 moveInput;
 
     public float speed = 1.0f;
     public float jumpForce = 10.0f;
@@ -33,16 +35,10 @@ public class Player : MonoBehaviour
 
     void FixedUpdate()
     {
+        rb.velocity = new Vector2(moveInput.x * speed, rb.velocity.y);
+        //print("Velocity: " + rb.velocity);
     }
-
-    public void OnMove(InputAction.CallbackContext context)
-    {
-        var axisInput = context.ReadValue<Vector2>();
-        float horizontalInput = axisInput.x;
-        rb.velocity = new Vector2(horizontalInput * speed, rb.velocity.y);
-    }
-
-
+        
     private IEnumerator JumpFrameSkipRoutine()
     {
         while(!_grounded)
@@ -54,7 +50,7 @@ public class Player : MonoBehaviour
 
     private bool Grounded()
     {
-        RaycastHit2D hit = Physics2D.Raycast(gameObject.transform.position, -Vector2.up, 1.7f, LayerMask.GetMask("Ground"));
+        RaycastHit2D hit = Physics2D.Raycast(gameObject.transform.position, -Vector2.up, 1.7f, LayerMask.GetMask("Ground", "Enemy"));
         if(hit.collider != null)
         {
             return true;
@@ -68,16 +64,22 @@ public class Player : MonoBehaviour
     {
         if (context.ReadValueAsButton() && Grounded())
         {
-            rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+            rb.AddForce(Vector2.up * jumpForce);
             _grounded = false;
             StartCoroutine(JumpFrameSkipRoutine());
         }
     }
+    public void OnMove(InputAction.CallbackContext context)
+    {
+        var axisInput = context.ReadValue<Vector2>();
+        float horizontalInput = axisInput.x;
+        moveInput = new Vector2(horizontalInput, rb.velocity.y);
+    }
 
     public void TakeDamage()
     {
-        Destroy(gameObject, .2f);
-        FindObjectOfType<SceneDirector>().Reload();
+        Destroy(gameObject);
+        StartCoroutine(FindObjectOfType<SceneDirector>().Reload());
     }
 
 }
