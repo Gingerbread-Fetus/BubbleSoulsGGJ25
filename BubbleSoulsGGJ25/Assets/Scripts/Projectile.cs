@@ -34,7 +34,6 @@ public class Projectile : MonoBehaviour
         if (rb != null)
         {
             rb.velocity = newVelocity * speed;
-            print(rb.velocity);
         }
     }
 }

@@ -10,7 +10,6 @@ public class HandEnemyTrigger : MonoBehaviour
     {
         if(collision.CompareTag("Player"))
         {
-            print("Player has triggered the hand!");
             rbHand.SlamHand();
         }
     }

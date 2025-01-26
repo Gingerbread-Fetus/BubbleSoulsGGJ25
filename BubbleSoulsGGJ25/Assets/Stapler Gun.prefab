@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7613433060829673317}
   - component: {fileID: 2297468217838025096}
   - component: {fileID: 5023524804149505661}
+  - component: {fileID: 1190012803317716375}
   - component: {fileID: 4313235180035505843}
   m_Layer: 0
   m_Name: Stapler Gun
@@ -131,6 +132,41 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 2}
   m_EdgeRadius: 0
+--- !u!58 &1190012803317716375
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5901742304841847333}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 8.4
 --- !u!114 &4313235180035505843
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -145,4 +181,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Forceable: 0
   projectilePrefab: {fileID: 8284926001037390441, guid: 742e47fb4df9ad640bae0117fdc265b8, type: 3}
-  fireRate: 0.5
+  fireRate: 1
+  projectileSpeed: 4

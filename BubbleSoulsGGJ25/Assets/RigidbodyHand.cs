@@ -39,7 +39,6 @@ public class RigidbodyHand : MonoBehaviour
         if (collision.collider.CompareTag("Player"))
         {
             ContactPoint2D contact = collision.GetContact(0);
-            print(contact);
             if (Vector2.Dot(contact.normal, Vector2.up) == 1)
             {
                 collision.gameObject.GetComponent<Player>().TakeDamage();

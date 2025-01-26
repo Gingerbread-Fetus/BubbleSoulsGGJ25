@@ -79,7 +79,9 @@ public class Player : MonoBehaviour
     public void TakeDamage()
     {
         Destroy(gameObject);
-        StartCoroutine(FindObjectOfType<SceneDirector>().Reload());
-    }
+        //play death animation
 
+        //Reload scene
+        SceneDirector.Instance.StartReload(0,1.0f);
+    }
 }

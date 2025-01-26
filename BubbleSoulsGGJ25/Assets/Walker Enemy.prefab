@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 182554294546053414}
   - component: {fileID: 1520465060614156514}
   m_Layer: 0
-  m_Name: Goomba
+  m_Name: Walker Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

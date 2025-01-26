@@ -9,7 +9,7 @@ public class StaplerGunEnemy : Enemy
     GameObject playerTarget;
 
     public float fireRate = .5f;
-    private float rotationSpeed = 1.0f;
+    public float projectileSpeed = 1.0f;
 
     // Start is called before the first frame update
     void Start()
@@ -68,6 +68,7 @@ public class StaplerGunEnemy : Enemy
             GameObject newProjectile = Instantiate(projectilePrefab, gameObject.transform.position, new Quaternion());
             Projectile prj = newProjectile.GetComponent<Projectile>();
 
+            prj.speed = projectileSpeed;
             prj.SetVelocity(transform.right);
             //newProjectile.transform.parent = transform; 
         }

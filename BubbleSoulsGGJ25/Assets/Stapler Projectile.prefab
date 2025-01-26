@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 6279351942623766270}
   - component: {fileID: 4195417326679148672}
   - component: {fileID: 3518489758192539834}
-  - component: {fileID: 6359633606588955520}
   - component: {fileID: 8704848207496255882}
+  - component: {fileID: 6359633606588955520}
   m_Layer: 0
   m_Name: Stapler Projectile
   m_TagString: Untagged
@@ -112,21 +112,8 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
---- !u!114 &6359633606588955520
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8284926001037390441}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a2171320e683174b999c1c108ee6aa6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 1
 --- !u!58 &8704848207496255882
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -162,3 +149,16 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!114 &6359633606588955520
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8284926001037390441}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a2171320e683174b999c1c108ee6aa6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1
