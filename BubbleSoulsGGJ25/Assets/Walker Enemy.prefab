@@ -9,10 +9,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6205445640077310882}
-  - component: {fileID: 116795988638312120}
   - component: {fileID: 1304982530170737592}
+  - component: {fileID: 116795988638312120}
   - component: {fileID: 182554294546053414}
-  - component: {fileID: 1520465060614156514}
+  - component: {fileID: 4661538171054020100}
   m_Layer: 0
   m_Name: Walker Enemy
   m_TagString: Untagged
@@ -35,6 +35,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1304982530170737592
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8205330435860750281}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05e2dd5a9867e95418c9b5be2848127f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Forceable: 0
+  moveDirection: 1
+  speed: 5
 --- !u!212 &116795988638312120
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -76,7 +91,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -935751026, guid: 040afd8c0f196ab42aba2269754afc64, type: 3}
+  m_Sprite: {fileID: -1099804008, guid: dd46712affb6eec42a46c79652d4579e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -87,21 +102,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1304982530170737592
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8205330435860750281}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 05e2dd5a9867e95418c9b5be2848127f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Moveable: 1
-  moveDirection: -1
-  speed: 5
 --- !u!50 &182554294546053414
 Rigidbody2D:
   serializedVersion: 4
@@ -129,8 +129,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!58 &1520465060614156514
-CircleCollider2D:
+--- !u!70 &4661538171054020100
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -161,6 +161,6 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.82
+  m_Offset: {x: 0, y: -0.52}
+  m_Size: {x: 3.67, y: 1.74}
+  m_Direction: 1

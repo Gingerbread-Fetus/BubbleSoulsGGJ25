@@ -16,6 +16,8 @@ public class Projectile : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        float angle = Mathf.Atan2(rb.velocity.y, rb.velocity.x) * Mathf.Rad2Deg; // Get angle from velocity
+        transform.rotation = Quaternion.Euler(0, 0, angle + 180); // Rotate to face the direction of movement
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

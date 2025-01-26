@@ -13,14 +13,20 @@ public class Player : MonoBehaviour
     private bool _jumpWait;
     private PlayerInput _playerInput;
     private Vector2 moveInput;
+    private Animator _animator;
+    private SpriteRenderer spriteRenderer;
 
     public float speed = 1.0f;
     public float jumpForce = 10.0f;
+    public float playerKillDepth = -20f;
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        _animator = GetComponent<Animator>();
+        _grounded = true;
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -30,6 +36,17 @@ public class Player : MonoBehaviour
         {
             _grounded = Grounded();
             _jumpWait = false;
+        }
+
+        _animator.SetBool("IsInAir", !_grounded);
+        _animator.SetBool("IsWalking", moveInput.x != 0f);
+
+        spriteRenderer.flipX = moveInput.x >= 0f;
+
+        print(transform.position.y);
+        if (transform.position.y <= playerKillDepth)
+        {
+            TakeDamage();
         }
     }
 
@@ -82,6 +99,6 @@ public class Player : MonoBehaviour
         //play death animation
 
         //Reload scene
-        SceneDirector.Instance.StartReload(0,1.0f);
+        SceneDirector.Instance.StartReload(1,1.0f);
     }
 }

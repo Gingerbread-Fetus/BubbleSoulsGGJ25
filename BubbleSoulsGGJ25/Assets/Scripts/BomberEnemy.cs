@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BomberEnemy : MonoBehaviour
+public class BomberEnemy : Enemy
 {
     [SerializeField] float dropActivationDistance = 15f;
     [SerializeField] float moveSpeed = 1f;
@@ -34,6 +34,7 @@ public class BomberEnemy : MonoBehaviour
             )
         {
             isActive = true;
+            rb.gravityScale = 1f;
         }
     }
 

@@ -31,6 +31,17 @@ public class SceneDirector : MonoBehaviour
         
     }
 
+    public void QuitGame()
+    {
+        print("Quitting...");
+        Application.Quit();
+    }
+
+    public void LoadScene(int sceneIndex)
+    {
+        StartCoroutine(Reload(sceneIndex, .2f));
+    }
+
     public void StartReload(int sceneIndex, float waitTime)
     {
         StartCoroutine(Reload(sceneIndex, waitTime));
