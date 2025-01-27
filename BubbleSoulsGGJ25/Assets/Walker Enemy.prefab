@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1304982530170737592}
   - component: {fileID: 116795988638312120}
   - component: {fileID: 182554294546053414}
-  - component: {fileID: 4661538171054020100}
+  - component: {fileID: 1103983605642649964}
   m_Layer: 7
   m_Name: Walker Enemy
   m_TagString: Untagged
@@ -48,7 +48,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Forceable: 0
-  moveDirection: 1
+  moveDirection: -1
   speed: 5
 --- !u!212 &116795988638312120
 SpriteRenderer:
@@ -90,7 +90,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -1099804008, guid: dd46712affb6eec42a46c79652d4579e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -129,8 +129,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!70 &4661538171054020100
-CapsuleCollider2D:
+--- !u!61 &1103983605642649964
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -161,6 +161,16 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.52}
-  m_Size: {x: 3.67, y: 1.74}
-  m_Direction: 1
+  m_Offset: {x: 0.22781652, y: -0.4188881}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 3.5, y: 3.34}
+    newSize: {x: 1.64, y: 1.61}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 3.0443668, y: 1.8849144}
+  m_EdgeRadius: 0

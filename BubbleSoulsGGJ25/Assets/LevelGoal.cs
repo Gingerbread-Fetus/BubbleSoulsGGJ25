@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class LevelGoal : MonoBehaviour
 {
+    public int nextScene = 0;
     // Start is called before the first frame update
     void Start()
     {

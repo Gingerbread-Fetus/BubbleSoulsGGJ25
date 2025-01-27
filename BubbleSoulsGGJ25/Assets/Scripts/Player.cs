@@ -43,7 +43,6 @@ public class Player : MonoBehaviour
 
         spriteRenderer.flipX = moveInput.x >= 0f;
 
-        print(transform.position.y);
         if (transform.position.y <= playerKillDepth)
         {
             TakeDamage();
