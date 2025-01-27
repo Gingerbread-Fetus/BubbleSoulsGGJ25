@@ -90,6 +90,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2748841c32e09f143bf4a949682e914c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rbHand: {fileID: 424941806275297619}
 --- !u!1 &3397766528025216931
 GameObject:
   m_ObjectHideFlags: 0
@@ -213,7 +214,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 126947117, guid: f8db63215842a7b429a2a519cd0a38b6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -309,3 +310,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ad02edd8f8d3c247bf9a6e756969458, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dropSpeed: 0
+  waitTime: 0
